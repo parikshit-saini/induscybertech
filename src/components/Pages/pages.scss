@@ -1,0 +1,213 @@
+@import "../../index.scss";
+
+.website {
+    margin-top: 135px;
+}
+
+.commonHeading {
+    h1 {
+        color: $secondary;
+        text-align: center;
+    }
+
+    p {
+        font-size: 20px;
+        max-width: 789px;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+}
+
+section.main {
+    background: $gradient;
+    padding: 40px 0 70px 0;
+
+    .content {
+        max-width: 486px;
+
+        p.support {
+            color: $primary;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+
+        h1 {
+            font-weight: 600;
+            color: $light;
+        }
+
+        p {
+            color: $light;
+            font-size: 16px;
+        }
+    }
+}
+
+section.about {
+    padding: 70px 0;
+    background-color: $supporting;
+}
+
+section.service {
+    padding: 70px 0;
+
+    .content {
+        @include itemPosition(center, center);
+        gap: 10px;
+        flex-direction: column;
+        text-align: center;
+        background: $supporting;
+        padding: 20px;
+        height: 100%;
+        transition: all 0.5s;
+
+        i {
+            color: $secondary;
+            font-size: 50px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 14px;
+
+        }
+
+        &:hover {
+            background: $gradient;
+            color: $light;
+            transform: rotate(2deg);
+
+            i {
+                color: $primary;
+            }
+        }
+    }
+}
+
+section.whychoose {
+    padding: 70px 0;
+
+    .content {
+        max-width: 423px;
+    }
+}
+
+.page-head {
+    padding: 70px 0;
+    background: $gradient;
+    text-align: center;
+
+    h1 {
+        font-size: 40px;
+        color: $light;
+    }
+
+    p.pageSubTitle {
+        text-transform: uppercase;
+        color: $primary;
+        font-size: 20px;
+        max-width: 436px;
+        margin: auto;
+        font-weight: 500;
+
+    }
+}
+
+section.description {
+    padding: 70px 0;
+    background-color: $supporting;
+
+    p {
+        a {
+            color: $secondary;
+            font-weight: 600;
+        }
+    }
+}
+
+section.mission {
+    padding: 70px 0;
+
+    .content {
+        padding: 15px;
+        background-color: $grey;
+        height: 100%;
+        box-shadow: 4px 6px 32px rgba(0, 0, 0, 0.11);
+
+
+        p.support {
+            font-family: "Play", sans-serif;
+            max-width: 500px;
+        }
+    }
+}
+
+section.usecase {
+    padding: 70px;
+    text-align: center;
+    background-color: $grey;
+
+    p {
+        max-width: 837px;
+        margin: auto;
+    }
+}
+
+section.callToaction {
+    margin-bottom: 70px;
+
+    .cta_box {
+        padding: 70px auto;
+        background: $gradient;
+        color: $light;
+
+        p {
+            font-size: 25px;
+            max-width: 380px;
+            font-weight: 300;
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                margin: 20px 0;
+
+                i {
+                    color: $primary;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+}
+
+section.thankYou {
+    padding: 70px 0;
+
+    .compressed {
+        max-width: 500px;
+        margin: 20px auto;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    section.whychoose {
+
+        .content {
+            margin: auto;
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .website {
+        margin-top: 128px;
+    }
+}

@@ -1,0 +1,103 @@
+// Google Fonts 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Antonio", sans-serif;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+}
+
+// Colors 
+$primary: #D1F801;
+$secondary: #0F2028;
+$supporting: #F1FDB2;
+$grey: #F6F8F7;
+$light: #ffffff;
+$gradient: radial-gradient(288.97% 580.58% at 3.57% 16.91%, #08191F 27.47%, #D1F801 100%);
+
+
+
+// Mixins 
+@mixin itemPosition($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+// Common Style 
+a {
+  text-decoration: none;
+}
+
+// Common Class
+
+.text-theme {
+  color: $primary;
+}
+
+.centerMid {
+  @include itemPosition(center, center);
+}
+
+// Buttons
+
+.btn-outline {
+  border: 1px solid $primary;
+  color: $primary;
+  border-radius: 10px;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: $primary;
+    color: $secondary;
+    border-radius: 40px;
+
+  }
+
+  &.call {
+    @include itemPosition(center, center);
+    white-space: nowrap;
+  }
+}
+
+.btn-theme {
+  border: 1px solid $primary;
+  background-color: $primary;
+  color: $secondary;
+  border-radius: 10px;
+  transition: all 0.5s;
+  font-weight: 500;
+
+  &:hover {
+    background-color: $light;
+    color: $secondary;
+    transform: scale(1.1);
+
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    h1 {
+      font-size: 35px;
+    }
+  }
+}
